@@ -2,7 +2,6 @@ var quizSpace = document.querySelector("#quiz-container");
 var startButton = document.querySelector(".start-button");
 var timerElement = document.querySelector(".timer-count");
 
-
 var timer;
 var timerCount = 0;
 var done = false;
@@ -29,7 +28,7 @@ function init() {
 //function that runs on start press. Sets time, starts win condition, and runs first question
 function startGame() {
     timerCount = 60;
-
+    
     startTimer()
     questionOne();
   }
@@ -39,7 +38,7 @@ function startTimer() {
 timer = setInterval(function() {
     timerCount--;
     timerElement.textContent = timerCount;
-
+    
     if (timerCount >= 0 && done) {
         score = timerCount;
         startButton.disabled = true;

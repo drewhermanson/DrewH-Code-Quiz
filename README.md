@@ -18,7 +18,7 @@ https://drewhermanson.github.io/DrewH-Code-Quiz/
 ## Mock-up
 
 
-![Quiz with multiple options and a time limit](../Assets/images/expected.png)
+![Quiz with multiple options and a time limit](./Assets/images/Expected.png)
 
 
 

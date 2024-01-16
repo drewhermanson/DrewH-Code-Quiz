@@ -385,7 +385,7 @@ function enterScore() {
 
 }
 
-function setScores(){
+function setScores() {
     //pulls scores and names from local storage
     var storedScores = JSON.parse(localStorage.getItem("highScores"));
     var storedNames = JSON.parse(localStorage.getItem("highNames"));
@@ -403,9 +403,25 @@ function setScores(){
         highScores.push(lastScore.score);
         highNames.push(lastScore.initials);
     }
-    //sorts the scores and sorts them from highest to lowest
-    highScores.sort(function(a, b){return b-a});
-    
+    //creates a variable that combines the scores and names into one array and maps them together
+    var sortedScores = highScores.map(function(score, index) {
+        return { score: score, name: highNames[index] };
+    //sorts the scores and keeps the position of highNames and highScores together while sorting highScores descending
+    }).sort(function(a, b) {
+        return b.score - a.score;
+    });
+
+    //updates highScores and highNames arrays with the sorted values
+    highScores = sortedScores.map(function(item) {
+        return item.score;
+    });
+
+    highNames = sortedScores.map(function(item) {
+        return item.name;
+    });
+    //Side note i could have just put scores and names into an object like i did yourScore but just forgot by this point and just searched up an obviously more complicated
+    //method of sorting arrays and keeping them together. 
+
     //sets the scores and names to local storage
     localStorage.setItem("highScores", JSON.stringify(highScores));
     localStorage.setItem("highNames", JSON.stringify(highNames));
@@ -428,7 +444,7 @@ function leaderBoard() {
     }
 }
 
-//runs init function on load
+//runs init function on page load
 init();
 //button listeners for start and leaderboard buttons
 startButton.addEventListener("click", startGame);

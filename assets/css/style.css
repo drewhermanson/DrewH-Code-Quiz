@@ -1,0 +1,99 @@
+/*setting box style*/
+* {
+    box-sizing: border-box;
+  }
+  
+  /*Entire sheet styling*/
+  body {
+    display: flex;
+    min-width: fit-content;
+    min-height: fit-content;
+    font-family: Arial;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: gray;
+  }
+
+  /*header style*/
+  header {
+    background: rgb(105, 105, 194);
+    color: white;
+    padding: 15px;
+    text-align: center;
+    max-height: 300px;
+    width: 100%;
+  }
+
+  /*specific styles for APIs*/
+  h2{
+    font-size: 3rem;
+    line-height: 16px;
+  }
+
+  /*settings to but button in top left*/
+  #leaderButton{
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 5px;
+    font-size: 1rem;
+    }
+
+    /*settings for all buttons*/
+  button {
+    background: darkblue;
+    border-radius: 5px;
+    padding: 20px 50px;
+    color: white;
+    cursor: pointer;
+    font-size: 2rem;
+    line-height: 16px;
+    text-align: center;
+  }
+
+  /*alignment for api content*/
+  #quiz-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+  }
+
+    /*alignment for api content*/   
+  #quiz-container h2{
+    display: flex;
+    justify-content: center;
+  }
+
+  /*alignment for api content*/
+  #quiz-container h1{
+    display: flex;
+    justify-content: center;
+  }
+
+  /*api button spacing*/
+  #quiz-container button{
+    justify-content: center;
+    margin: 5px;
+  }
+
+  /*highscore submit styles*/
+  form{
+    font-size: 2rem;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+  }
+
+  /*form input field styling*/
+  input{
+    height: 30px;
+    text-align: center;
+  }
+
+
